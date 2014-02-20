@@ -62,10 +62,10 @@ task :albums do
 
     TextUtils::Page.create( "#{PAGES_DIR}/#{size}.md", frontmatter: {
                                                           layout: 'album',
-                                                          title: album.title,
+                                                          title: "sport.db.logos (#{size}x#{size})",
                                                           permalink: "/#{size}.html" } ) do |page|
         page.write HyBook.render_album( album,
-                                          title: "sport.db.logos #{size}x#{size}",
+                                          title: "sport.db.logos (#{size}x#{size})",
                                           size: size )
     end # page
   end # each LOGO_SIZES
