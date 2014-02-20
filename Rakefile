@@ -37,6 +37,43 @@ LOGO_INPUT_DIR = '../sport.db.logos'
 LOGO_OUTPUT_DIR = 'vendor/assets/images/logos'
 
 
+
+require 'hybook'
+
+
+desc 'debug build album'
+task :debug_album do
+  album = HyBook::Album.create_from_folder( LOGO_INPUT_DIR, title: 'sport.db.logos' )
+  pp album
+
+  puts HyBook.render_album( album, size: 24 )
+end
+
+
+desc 'sportdb-logos - build album pages'
+task :albums do
+
+  PAGES_DIR = './site'
+
+  album =  HyBook::Album.create_from_folder( LOGO_INPUT_DIR, title: 'sport.db.logos' ) 
+
+  ## build one album page per logo size (e.g. 24x24, 32x32 etc.)
+  LOGO_SIZES.each do |size|
+
+    TextUtils::Page.create( "#{PAGES_DIR}/#{size}.md", frontmatter: {
+                                                          layout: 'album',
+                                                          title: album.title,
+                                                          permalink: "/#{size}.html" } ) do |page|
+        page.write HyBook.render_album( album,
+                                          title: "sport.db.logos #{size}x#{size}",
+                                          size: size )
+    end # page
+  end # each LOGO_SIZES
+
+  puts 'Done.'
+end
+
+
 desc 'sportdb-logos - build thumbs'
 task :build_thumbs do
 

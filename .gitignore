@@ -17,3 +17,8 @@ tmp
 _yardoc
 doc/
 
+
+## Jekyll-Generated Site
+_site/
+
+
