@@ -3,8 +3,8 @@
 sportdb-logos gem - national team logos bundled for reuse w/ asset pipeline
 
 
-* home  :: [github.com/geraldb/sport.db.logos.ruby](https://github.com/geraldb/sport.db.logos.ruby)
-* bugs  :: [github.com/geraldb/sport.db.logos.ruby/issues](https://github.com/geraldb/sport.db.logos.ruby/issues)
+* home  :: [github.com/sportlogos/sport.db.logos.ruby](https://github.com/sportlogos/sport.db.logos.ruby)
+* bugs  :: [github.com/sportlogos/sport.db.logos.ruby/issues](https://github.com/sportlogos/sport.db.logos.ruby/issues)
 * forum :: [groups.google.com/group/opensport](https://groups.google.com/group/opensport)
 
 ## Usage
@@ -12,13 +12,7 @@ sportdb-logos gem - national team logos bundled for reuse w/ asset pipeline
 TBD
 
 
+## Album Pages (Preview)
 
-
-## Dev Notes
-
-Use 
-
-    $ rake debug_gem > sportdb-logos.gemspec
-
-to update (auto-generate) gemspec.
-
+- [24x24](http://sportlogos.github.io/sport.db.logos.ruby/24.html)
+- [32x32](http://sportlogos.github.io/sport.db.logos.ruby/32.html)
